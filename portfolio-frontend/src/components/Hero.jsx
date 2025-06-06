@@ -2,8 +2,29 @@ import React from 'react'
 
 export const Hero = () => {
     return (
-        <div>
-            
-        </div>
+        <section id='home' className='w-full bg-gradient-to-r from-blue-50 to-indigo-50 py-20 md:py-32'>
+            <div className='container mx-auto px-4 flex flex-col md:flex-row items-center'>
+                <div className='md:w-1/2 mb-10 md:mb-0'>
+                    <h1 className='text-4xl md:Text-5xl lg:text-6xl font-bold text-gray-900 mb-4'>Hi, I'm <span className='text-blue-600'>Simon Lephoto</span></h1>
+                    <h2 className='text-xl md:text-2xl tetx-gray-600 mb-6'>Full Stack Developer</h2>
+                    <p className="text-gray-600 text-lg mb-8 max-w-lg">I build</p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">Get In Touch</a>
+                        <a href="#projects"
+                            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">View My Work</a>
+                    </div>
+                    <div>
+                        <a href="">Github</a>
+                        <a href="">LinkedIn</a>
+                    </div>
+                </div>
+                <div className='md:w-1/2 flex justify-center'>
+                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="" alt="Professional headshot" className="w-full h-full object-cover bg-black" />
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
