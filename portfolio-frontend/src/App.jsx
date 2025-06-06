@@ -3,6 +3,7 @@ import './App.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
+import { Skills } from './components/Skills'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Skills />
       </main>
       <Footer />
     </div>
