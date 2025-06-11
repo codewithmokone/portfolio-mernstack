@@ -13,7 +13,7 @@ export const About = () => {
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              src="src/assets/images/about-image-pexels-luis-gomes-166706-546819.jpg"
               alt="Developer working"
               className="rounded-lg shadow-lg w-full"
             />
@@ -23,16 +23,29 @@ export const About = () => {
               My Journey
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Hi, I’m [Your Name] — a passionate Full Stack Developer with a solid foundation in both front-end and back-end development. I recently graduated with a degree in [Your Degree, e.g., BSc in Computer Science] from [Your University], where I developed a strong interest in building intuitive, responsive web applications and solving real-world problems through code.
+              Hi, I'm Simon Lephoto — a passionate Full Stack Developer with a solid 
+              foundation in both front-end and back-end development. I have a Diploma 
+              in Information Technology, Certificate in React Development, where I 
+              developed a strong interest in building intuitive, responsive web 
+              applications and solving real-world problems through code.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              During my studies, I honed my skills in technologies like JavaScript, React, Node.js, Express, and MongoDB, while also gaining experience with HTML, CSS, SQL, Git, and modern development tools. I’ve worked on several academic and personal projects that showcase my ability to design, develop, and deploy full-stack applications from the ground up.
+              During my studies, I honed my skills in technologies like JavaScript, React, 
+              Node.js, Express, and MongoDB, while also gaining experience with HTML, CSS, 
+              SQL, Git, and modern development tools. I've worked on several academic and 
+              personal projects that showcase my ability to design, develop, and deploy 
+              full-stack applications from the ground up.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              What sets me apart is my curiosity and eagerness to learn. I’m always exploring new frameworks, keeping up with the latest trends in web development, and looking for opportunities to grow. Whether it’s collaborating with a team or tackling a solo project, I take pride in writing clean, maintainable code and delivering thoughtful user experiences.
+              What sets me apart is my curiosity and eagerness to learn. I'm always exploring 
+              new frameworks, keeping up with the latest trends in web development, and looking 
+              for opportunities to grow. Whether it's collaborating with a team or tackling a solo 
+              project, I take pride in writing clean, maintainable code and delivering thoughtful 
+              user experiences.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-                Right now, I’m looking for exciting opportunities where I can contribute, learn from experienced developers, and continue building impactful digital solutions.
+              Right now, I'm looking for exciting opportunities where I can contribute, learn 
+              from experienced developers, and continue building impactful digital solutions.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div>
