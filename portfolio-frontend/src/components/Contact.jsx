@@ -30,7 +30,7 @@ export const Contact = () => {
                             href="mailto:hello@example.com"
                             className="text-blue-600 hover:underline"
                             >
-                            hello@example.com
+                            simonlephotojr@gmail.com
                             </a>
                         </div>
                         </div>
@@ -44,7 +44,7 @@ export const Contact = () => {
                             href="tel:+11234567890"
                             className="text-blue-600 hover:underline"
                             >
-                            +1 (123) 456-7890
+                            +27 (071) 313-2387
                             </a>
                         </div>
                         </div>
@@ -55,9 +55,9 @@ export const Contact = () => {
                         <div>
                             <h4 className="font-medium text-gray-900">Location</h4>
                             <p className="text-gray-600">
-                            San Francisco, CA
+                            Benoni, Gauteng
                             <br />
-                            United States
+                            South Africa
                             </p>
                         </div>
                         </div>

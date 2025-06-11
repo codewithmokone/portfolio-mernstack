@@ -5,6 +5,8 @@ import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
+import { About } from './components/About'
+import { Projects } from './components/Projects'
 
 function App() {
 
@@ -13,7 +15,9 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <About />
         <Skills />
+        <Projects />
         <Contact />
       </main>
       <Footer />
