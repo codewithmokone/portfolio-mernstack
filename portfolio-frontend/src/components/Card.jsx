@@ -24,7 +24,7 @@ export const Card = () => {
     return (
         <>
             {skillsData.map((skill, index) => (
-                <div key={index} id='card' className='bg-gray-50 p-6 rounded-lg shadow-sm'>
+                <div key={index} id='card' className='bg-white p-6 rounded-lg shadow-sm'>
                     <h3 className='text-xl font-bold mb-4 text-gray-800 flex items-center'>
                         {/* <span className='bg-blue-100 text-blue-800 p-2 rounded-full mr-3'>
                             {skill.skill_icon}
@@ -38,8 +38,6 @@ export const Card = () => {
                             </li>         
                         )}
                     </ul>
-
-                
                 </div>
             ))}
         </>

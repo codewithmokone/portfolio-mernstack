@@ -38,7 +38,7 @@ export const Projects = () => {
         ? projects 
         : projects.filter((project) => project.category === activeCategory)
     return (
-        <section id='projects' className='py-20 bg-gray-50'>
+        <section id='projects' className='py-20 bg-white'>
             <div className='container mx-auto px-4 sm:py-6 lg:px-8'>
                 <div className='text-center mb-12'>
                     <h2 className='text-3xl font-bold text-gray-800'>My Projects</h2>
@@ -61,7 +61,7 @@ export const Projects = () => {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {filteredprojects.map((project,index) => (
-                        <div key={index} className='bg-white rounded-lg overflow-hidden shadows-md hover:shadow-lg transition-shadow'>
+                        <div key={index} className='bg-gray-50 rounded-lg overflow-hidden shadows-md hover:shadow-lg transition-shadow'>
                             <div className="h-48 overflow-hidden">
                                 <img
                                 src={project.image}

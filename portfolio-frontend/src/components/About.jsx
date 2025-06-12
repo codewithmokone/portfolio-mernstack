@@ -54,8 +54,7 @@ export const About = () => {
                   Diploma In IT - Rosebank College
                   <br />
                   Certificate In React Development - MLab 
-                  <br />
-                  University of Technology
+                  
                 </p>
               </div>
               <div>
