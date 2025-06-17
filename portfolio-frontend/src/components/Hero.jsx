@@ -16,15 +16,15 @@ export const Hero = () => {
                             className="border px-4 py-3 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center">View My Work</a>
                     </div>
                     <div className='flex gap-6 mt-6'>
-                        <a href="">< Github size={24} className="text-gray-700 hover:text-blue-600 transition-colors"/></a>
-                        <a href="">
+                        <a href="#">< Github size={24} className="text-gray-700 hover:text-blue-600 transition-colors"/></a>
+                        <a href="#">
                             < Linkedin size={24} className="text-gray-700 hover:text-blue-600 transition-colors"/>
                             </a>
                     </div>
                 </div>
                 <div className='md:w-1/2 flex justify-center'>
                     <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="" alt="Professional headshot" className="w-full h-full object-cover bg-black" />
+                        <img src="#" alt="Professional headshot" className="w-full h-full object-cover bg-black" />
                     </div>
                 </div>
             </div>

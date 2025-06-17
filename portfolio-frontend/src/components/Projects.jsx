@@ -1,28 +1,6 @@
 import React, {useState} from 'react';
 import { Github, ExternalLinkIcon } from 'lucide-react';
-
-const projects = [
-    {
-        id: 1,
-        title: "E-commerce Platform",
-        category: "Web Application",
-        image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1568&q=80",
-        description: 'A full-feature e-commerce platform with product manager',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
-        liveLink: "#",
-        githubLink: "#"
-    },
-    {
-        id: 2,
-        title: "Weather Dashboard",
-        category: "API Integration",
-        image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1568&q=80",
-        description: "An interactive weather dashboard",
-        technologies: ['Javascript', 'OpenWeather API', 'Chart.js', 'Geolocation API'],
-        liveLink: "#",
-        githubLink: "#"
-    }
-]
+import { useEffect } from 'react';
 
 const categories = [
     'All',
@@ -33,10 +11,34 @@ const categories = [
 ]
 
 export const Projects = () => {
-    const [activeCategory, setActiveCategory] = useState('All')
+    const [projects, setProjects] = useState('');
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    console.log('Info: ', projects);
+
     const filteredprojects = activeCategory === 'All' 
         ? projects 
-        : projects.filter((project) => project.category === activeCategory)
+        : projects.filter((project) => project.category === activeCategory);
+    
+    useEffect(() => {
+        try {
+            const fetchProjects = async () => {
+                const response = await fetch('http://localhost:4000/api/portfolio');
+                const json = await response.json();
+
+                if (response.ok) {
+                    setProjects(json);
+                    console.log('Data: ', json);
+                }
+            }
+
+            fetchProjects();
+        } catch (error) {
+            console.log(error);
+        }
+        
+    }, []);
+
     return (
         <section id='projects' className='py-20 bg-white'>
             <div className='container mx-auto px-4 sm:py-6 lg:px-8'>
@@ -60,7 +62,7 @@ export const Projects = () => {
                     ))}
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                    {filteredprojects.map((project,index) => (
+                    {filteredprojects && filteredprojects.map((project,index) => (
                         <div key={index} className='bg-gray-50 rounded-lg overflow-hidden shadows-md hover:shadow-lg transition-shadow'>
                             <div className="h-48 overflow-hidden">
                                 <img
