@@ -23,7 +23,7 @@ export const Projects = () => {
     useEffect(() => {
         try {
             const fetchProjects = async () => {
-                const response = await fetch('http://localhost:4000/api/portfolio');
+                const response = await fetch('http://localhost:4000/api/portfolio/fetch');
                 const json = await response.json();
 
                 if (response.ok) {
@@ -66,7 +66,7 @@ export const Projects = () => {
                         <div key={index} className='bg-gray-50 rounded-lg overflow-hidden shadows-md hover:shadow-lg transition-shadow'>
                             <div className="h-48 overflow-hidden">
                                 <img
-                                src={project.image}
+                                src={`data:${project.image.content};base64,${project.image.data}`}
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-transform hover:scale-105"
                                 />
