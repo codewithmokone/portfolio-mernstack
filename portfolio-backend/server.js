@@ -7,7 +7,7 @@ const path = require('path');
 const portfolioRoutes = require('./routes/records');
 // const nodemailer = require('nodemailer');
 // const bodyParser = require('body-parser');
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 // Express app
 const app = express();
