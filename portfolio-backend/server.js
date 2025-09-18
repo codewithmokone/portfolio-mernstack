@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 // const multer = require('multer');
 const portfolioRoutes = require('./routes/records');
 // const nodemailer = require('nodemailer');
@@ -11,12 +12,14 @@ const port = process.env.PORT;
 // Express app
 const app = express();
 
+
 // Templeting engine
 app.set('view engine', 'ejs');
 
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from the 'public' directory
 
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());

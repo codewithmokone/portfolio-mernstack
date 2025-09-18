@@ -9,12 +9,12 @@ export const Footer = () => {
                         <div className='text-2xl font-bold mb-2'>Portfolio</div>
                     </div>
                     <div className='flex flex-col items-center md:items-end'>
-                        <div className='flex space-x-4 mb-4'>
+                        {/* <div className='flex space-x-4 mb-4'>
                             <a href=""></a>
                             <a href=""></a>
                             <a href=""></a>
                             <a href=""></a>
-                        </div>
+                        </div> */}
                         <div>
                             <p>@ {new Date().getFullYear()} Portfolio. All rights reserved.</p>
                         </div>

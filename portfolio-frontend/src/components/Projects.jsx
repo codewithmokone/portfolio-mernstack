@@ -4,9 +4,8 @@ import { useEffect } from 'react';
 
 const categories = [
     'All',
-    'Web Application',
-    'API Integration',
     'Frontend',
+    'Mobile Apps',
     'Full Stack'
 ]
 

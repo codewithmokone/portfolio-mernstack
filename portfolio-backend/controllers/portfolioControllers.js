@@ -4,7 +4,6 @@ const path = require('path');
 
 // Get all projects
 const getProjects = async (req, res) => {
-
     try {
         const projects = await Project.find({});
         const formattedProjects = projects.map(project => ({
@@ -23,7 +22,6 @@ const getProjects = async (req, res) => {
         }));
 
         res.status(200).json(formattedProjects);
-        console.log('Data: ', formattedProjects);
     } catch (error) {
         console.log(error); 
     }
@@ -35,8 +33,6 @@ const addProject = async (req, res) => {
         const { title, category, desc, technologies, liveLink, githubLink} = req.body;
 
         const imageData = fs.readFileSync(path.join(__dirname + '../../uploads/' + req.file.filename));
-
-        console.log(title, category, desc, technologies, liveLink, githubLink);
         
         const projectInfo = {
             title, 

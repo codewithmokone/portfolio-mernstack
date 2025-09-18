@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { HashLink } from "react-router-hash-link"
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

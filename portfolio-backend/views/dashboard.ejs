@@ -3,24 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Portfolio Dashboard</title>
 </head>
 <body>
     <header>
         <div class="container">
             <span>Dashboard</span>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Upload</a>
+            </nav>
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="main-container">
             <div>
                 <h1>Upload A Project</h1>
             </div>
-            <div>
-                <div>
-                   
+            <div class="main-content">
+                <div class="display-data">
+                   <% data.forEach(function(project) { %>
+                        <div class="card">
+                                <img
+                                    src="data:image/<%=project.image.contentType%>;base64,
+                                            <%=project.image.data.toString('base64')%>"
+                                />
+                                <div class="card-info">
+                                    <h4><%= project.title %></h4>
+                                    <p><%= project.desc %></p>
+                                    <p><%= project.category %></p>
+                                    <p><%= project.technologies %></p>
+                                    <div class="card-buttons">
+                                        <div class="btns">
+                                            <a href="#">Live Link</a>
+                                            <a href="#">Github Link</a>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="#">Edit</a>
+                                            <a href="#">Delete</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                        </div>
+                    <% }) %>
                 </div>
-                <div>
+                <div class="upload-data">
                     <form action="/api/portfolio/upload" method="POST" enctype="multipart/form-data" >
                         <div>
                             <label for="title">Title</label>
@@ -35,14 +64,12 @@
                         </div>
                         <div>
                             <label for="category">Category</label>
-                            <input 
-                                type="text" 
-                                name="category" 
-                                id="category"
-                                value=""
-                                placeholder="Category"
-                                required
-                            >
+                            <select name="category" id="category">
+                                <option value="Web Application">Web Application</option>
+                                <option value="API Integration">API Integration</option>
+                                <option value="Frontend">Frontend</option>
+                                <option value="Full Stack">Full Stack</option>
+                            </select>
                         </div>
                         <div>
                             <label for="desc">Description</label>
@@ -55,16 +82,21 @@
                                 required
                             >
                         </div>
-                        <div>
+                        <div class="checkbox-container">
                             <label for="technologies">Technologies</label>
-                            <input 
-                                type="text" 
-                                name="technologies" 
-                                id="technologies"
-                                value=""
-                                placeholder="Technologies"
-                                required
-                            >
+                            <div class="checkbox-item">   
+                                <input class="checkbox" type="checkbox" id="html" name="html" value="HTML">
+                                <label for="HTML"> HTML</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input class="checkbox" type="checkbox" id="css" name="css" value="CSS">
+                                <label for="CSS"> CSS</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input class="checkbox" type="checkbox" id="Javascript" name="Javascript" value="Javascript">
+                                <label for="Javascript"> Javascript</label>
+                            </div>
+                            
                         </div>
                         <div>
                             <label for="liveLink">Live Link</label>
