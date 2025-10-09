@@ -22,7 +22,9 @@ export const Projects = () => {
     useEffect(() => {
         try {
             const fetchProjects = async () => {
-                const response = await fetch('http://localhost:4000/api/portfolio/fetch');
+                // const response = await fetch('http://localhost:4000/api/portfolio/fetch');
+                const response = await fetch('https://portfolio-mernstack.onrender.com/api/portfolio/fetch');
+   
                 const json = await response.json();
 
                 if (response.ok) {
@@ -60,7 +62,7 @@ export const Projects = () => {
                         </button>
                     ))}
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4'>
                     {filteredprojects && filteredprojects.map((project,index) => (
                         <div key={index} className='bg-gray-50 rounded-lg overflow-hidden shadows-md hover:shadow-lg transition-shadow'>
                             <div className="h-48 overflow-hidden">
