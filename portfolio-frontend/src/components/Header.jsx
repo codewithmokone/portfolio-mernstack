@@ -12,7 +12,7 @@ export const Header = () => {
         <header className="sticky top-0 z-50 bg-white shadow-sm">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-2xl font-bold text-gray-800">Portfolio</div>
+                <div className="text-2xl font-bold text-gray-800">SL</div>
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex space-x-8">
                     <a href="#home" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
