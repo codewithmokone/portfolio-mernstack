@@ -8,7 +8,7 @@ export const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-[#06C4C5] to-[#2F77F6] mx-auto"></div>
         </div>
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-1/2">

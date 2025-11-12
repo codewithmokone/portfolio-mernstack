@@ -12,14 +12,14 @@ export const Header = () => {
         <header className="sticky top-0 z-50 bg-white shadow-sm">
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 {/* Logo */}
-                <div className="text-2xl font-bold text-gray-800">SL</div>
+                <div className="text-2xl font-bold text-gradient">SL</div>
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex space-x-8">
-                    <a href="#home" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
-                    <a href="#about" className="text-gray-600 hover:text-gray-900 font-medium">About</a>
-                    <a href="#skills" className="text-gray-600 hover:text-gray-900 font-medium">Skills</a>
-                    <a href="#projects" className="text-gray-600 hover:text-gray-900 font-medium">Projects</a>
-                    <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+                    <a href="#home" className="text-gray-600 hover:text-blue-500 font-medium">Home</a>
+                    <a href="#about" className="text-gray-600 hover:text-blue-500 font-medium">About</a>
+                    <a href="#skills" className="text-gray-600 hover:text-blue-500 font-medium">Skills</a>
+                    <a href="#projects" className="text-gray-600 hover:text-blue-500 font-medium">Projects</a>
+                    <a href="#contact" className="text-gray-600 hover:text-blue-500 font-medium">Contact</a>
                 </nav>
                 {/* Mobile Menu Button */}
                 <button className="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">

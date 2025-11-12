@@ -1,35 +1,54 @@
 import React from 'react'
-import { Github, Linkedin } from 'lucide-react'
+import { Github, Linkedin, ArrowDown } from 'lucide-react'
 
 export const Hero = () => {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
-        <section id='home' className='min-h-screen flex items-center bg-gradient-to-r from-blue-50 to-indigo-50 py-20 md:py-32'>
-            <div className='container mx-auto px-4 flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 mb-10 md:mb-0'>
-                    <h1 className='text-2xl md:Text-5xl lg:text-6xl font-bold text-gray-900 mb-4'>Hi, I'm <span className='text-blue-600'>Simon Lephoto</span></h1>
-                    <h2 className='text-xl md:text-2xl font-medium text-gray-600 mb-6'>Full Stack Developer</h2>
-                    <p className="text-gray-600 text-lg mb-8 max-w-lg">I build exceptional and accessible digital experiences for the
-                        web. Focused on creating intuitive and high-performance
-                        applications.</p>
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact"
-                            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">Get In Touch</a>
-                        <a href="#projects"
-                            className="border px-4 py-3 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center">View My Work</a>
-                    </div>
-                    <div className='flex gap-6 mt-6'>
-                        <a href="#">< Github size={24} className="text-gray-700 hover:text-blue-600 transition-colors" /></a>
-                        <a href="#">
-                            < Linkedin size={24} className="text-gray-700 hover:text-blue-600 transition-colors" />
-                        </a>
-                    </div>
+        <section id='home' className='min-h-screen flex items-center bg-gradient-to-r from-blue-40 to-indigo-50'>
+            <div className="container mx-auto text-center space-y-8">
+                <div className="space-y-4 animate-fade-in">
+                    <p className="text-gradient text-lg font-medium">Hi there, I'm</p>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                        <span className="text-gradient">Simon Lephoto</span>
+                    </h1>
+                    <h2 className="text-2xl  md:text-4xl text-gray-500 font-normal">
+                        Full Stack Developer
+                    </h2>
                 </div>
-                <div className='md:w-1/2 flex justify-center'>
-                    <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="#" alt="Professional headshot" className="w-full h-full object-cover bg-black" />
-                    </div>
+
+                <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                    Building intuitive, responsive web applications and solving real-world problems through clean code and thoughtful design.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                    <a
+                        href='#contact'
+                        onClick={() => scrollToSection('contact')}
+                        className='flex items-center bg-gradient-to-r from-[#06C4C5] to-[#2F77F6] h-11 rounded-md px-8 text-white hover:shadow-md'
+                    >
+                        Get In Touch
+                    </a>
+                    <a
+                        href='#about'
+                        onClick={() => scrollToSection('about')}
+                        className='flex items-center h-11 rounded-md px-8 border border-[#06C4C5]/80 text-gradient hover:bg-blue-600/20'
+                    >
+                        Learn More
+                    </a>
                 </div>
             </div>
+
+            <button
+                onClick={() => scrollToSection('about')}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer hover:text-primary transition-smooth"
+                aria-label="Scroll to about section"
+            >
+                <ArrowDown className="w-6 h-6 text-blue-500" />
+            </button>
         </section>
     )
 }

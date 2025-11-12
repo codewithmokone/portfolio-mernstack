@@ -15,7 +15,7 @@ export const Card = ({skills}) => {
                     </h3>
                     <ul className='space-y-4'>
                         {skill.skills_list.map((skillset, index) => <li key={index} className='flex items-center'>
-                            <CheckCircleIcon size={24} className='text-blue-700' />
+                            <CheckCircleIcon size={24} className='text-blue-500' />
                             <span className='text-gray-700 ml-4'>{skillset}</span>
                             </li>         
                         )}
