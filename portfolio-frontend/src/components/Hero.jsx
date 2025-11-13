@@ -1,5 +1,6 @@
 import React from 'react'
-import { Github, Linkedin, ArrowDown } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
+import file from "../assets/Resume_-_Simon_Lephoto.pdf";
 
 export const Hero = () => {
     const scrollToSection = (sectionId) => {
@@ -20,7 +21,7 @@ export const Hero = () => {
                     </h2>
                 </div>
 
-                <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
                     Building intuitive, responsive web applications and solving real-world problems through clean code and thoughtful design.
                 </p>
 
@@ -28,16 +29,16 @@ export const Hero = () => {
                     <a
                         href='#contact'
                         onClick={() => scrollToSection('contact')}
-                        className='flex items-center bg-gradient-to-r from-[#06C4C5] to-[#2F77F6] h-11 rounded-md px-8 text-white hover:shadow-md'
+                        className='flex items-center bg-gradient-to-r from-[#06C4C5] to-[#2F77F6] h-11 rounded-md px-8 text-white font-medium hover:shadow-md'
                     >
                         Get In Touch
                     </a>
                     <a
-                        href='#about'
-                        onClick={() => scrollToSection('about')}
-                        className='flex items-center h-11 rounded-md px-8 border border-[#06C4C5]/80 text-gradient hover:bg-blue-600/20'
+                        href={file}
+                        target='_blank'
+                        className='flex items-center h-11 rounded-md px-8 border border-[#06C4C5]/80 text-gradient font-medium hover:bg-blue-600/20'
                     >
-                        Learn More
+                        Download CV
                     </a>
                 </div>
             </div>

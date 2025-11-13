@@ -1,5 +1,7 @@
-import React, { useState } from "react"
-import { HashLink } from "react-router-hash-link"
+import React, { useState } from "react";
+import { HashLink } from "react-router-hash-link";
+import {ArrowDownToLine} from "lucide-react";
+import file from "../assets/Resume_-_Simon_Lephoto.pdf";
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,12 +16,19 @@ export const Header = () => {
                 {/* Logo */}
                 <div className="text-2xl font-bold text-gradient">SL</div>
                 {/* Desktop Menu */}
-                <nav className="hidden md:flex space-x-8">
+                <nav className="hidden md:flex md:items-center space-x-8">
                     <a href="#home" className="text-gray-600 hover:text-blue-500 font-medium">Home</a>
                     <a href="#about" className="text-gray-600 hover:text-blue-500 font-medium">About</a>
                     <a href="#skills" className="text-gray-600 hover:text-blue-500 font-medium">Skills</a>
                     <a href="#projects" className="text-gray-600 hover:text-blue-500 font-medium">Projects</a>
                     <a href="#contact" className="text-gray-600 hover:text-blue-500 font-medium">Contact</a>
+                     <a
+                        href={file}
+                        target="_blank"
+                        className='flex items-center gap-2 bg-gradient-to-r from-[#06C4C5] to-[#2F77F6] h-11 rounded-md px-6 text-white hover:shadow-md'
+                    >
+                        <ArrowDownToLine />CV
+                    </a>
                 </nav>
                 {/* Mobile Menu Button */}
                 <button className="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none">
