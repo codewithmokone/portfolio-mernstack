@@ -84,7 +84,7 @@ export const Contact = () => {
                                             href="tel:+11234567890"
                                             className="text-gray-500 hover:underline"
                                         >
-                                            +27 (071) 313-2387
+                                            +27 71 313 2387
                                         </a>
                                     </div>
                                 </div>
